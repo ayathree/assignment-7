@@ -2,7 +2,7 @@ import { CiClock2 } from "react-icons/ci";
 import { AiOutlineFire } from "react-icons/ai";
 import Ingredient from "../Ingredient/Ingredient";
 
-const Recipes = ({recipe}) => {
+const Recipes = ({recipe,handleWantToCook}) => {
 
 
 
@@ -42,7 +42,7 @@ console.log(ingredients);
     </div>
    </div>
     <div className="card-actions">
-      <button className="btn bg-green-400">Want to cook</button>
+      <button onClick={()=>handleWantToCook(recipe)} className="btn bg-green-400">Want to cook</button>
     </div>
   </div>
 </div>
