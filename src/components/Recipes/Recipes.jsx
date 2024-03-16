@@ -11,15 +11,15 @@ const Recipes = ({recipe}) => {
 const ingredients= recipe.ingredients;
 console.log(ingredients);
     return (
-        <div className="card  bg-base-100 shadow-xl">
-  <figure className="px-5 pt-10">
-    <img src={recipe_image} alt='' className="rounded-xl" />
+        <div className="card border-2 bg-base-100 shadow-xl">
+  <figure className="p-2">
+    <img  src={recipe_image} alt='' className="rounded-xl w-[250px] h-[200px]" />
   </figure>
   <div className="card-body  text-start">
     <h2 className="card-title">{recipe_name}</h2>
-    <p className="border-b-2 border-black">{short_description}</p>
+    <p className="border-b-2 border-green-400 text-gray-500 ">{short_description}</p>
    <p className="text-lg font-semibold" >Ingredients : {ingredients.length} </p>
-   <ul className="list-disc px-5 border-b-2 border-black">
+   <ul className="list-disc px-5 border-b-2 border-green-400">
     
     {
         ingredients.map((ingredient,idx)=><Ingredient key={idx}

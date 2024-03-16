@@ -2,7 +2,7 @@
 
 const Ingredient = ({ingredient}) => {
     return (
-      <li>{ingredient}</li> 
+      <li className="text-gray-500">{ingredient}</li> 
     );
 };
 
