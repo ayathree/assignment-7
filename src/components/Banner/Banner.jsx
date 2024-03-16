@@ -1,4 +1,4 @@
-import banner from '../../../assets/images/Rectangle 1.jpg';
+import banner from '../../assets/images/Rectangle 1.jpg';
 
 const Banner = () => {
     return (
