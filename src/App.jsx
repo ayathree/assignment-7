@@ -106,6 +106,18 @@ function App() {
     samples.map((sample,idx)=><Current key={idx}
     sample={sample}></Current>)
   }
+
+  <tr>
+    <th colSpan={2}></th>
+    <th  className='p-5 '>Total Time:</th>
+    <th  className='p-5 '>Total Calories:</th>
+
+  </tr>
+  <tr>
+    <td colSpan={2}></td>
+    <td className='text-xs p-4'>{samples.reduce((p,c)=>p+c.preparing_time, 0)} min</td>
+    <td className='text-xs p-4'>{samples.reduce((p,c)=>p+c.calories, 0)} calories</td>
+  </tr>
   
   </table>
 

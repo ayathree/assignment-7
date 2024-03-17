@@ -33,11 +33,11 @@ console.log(ingredients);
    <div className="flex flex-row justify-between items-center">
     <div className="flex flex-row items-center ">
     <CiClock2 />
-    <p>{preparing_time}</p>
+    <p>{preparing_time} min</p>
     </div>
     <div className="flex flex-row items-center ">
     <AiOutlineFire />
-    <p>{calories}</p>
+    <p>{calories} calories</p>
 
     </div>
    </div>
