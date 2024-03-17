@@ -13,7 +13,7 @@ console.log(ingredients);
     return (
         <div className="card border-2 bg-base-100 shadow-xl">
   <figure className="p-2">
-    <img  src={recipe_image} alt='' className="rounded-xl w-[250px] h-[200px]" />
+    <img  src={recipe_image} alt='' className="rounded-xl w-[300px] h-[250px]" />
   </figure>
   <div className="card-body  text-start">
     <h2 className="card-title">{recipe_name}</h2>

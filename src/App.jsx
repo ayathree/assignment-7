@@ -60,12 +60,12 @@ function App() {
     
     
     <div>
-      <h1 className='text-3xl font-semibold'>Our Recipes</h1>
-      <p>Here you can find six of our popular dishes as a beginner learner. You can select any one or more items that you want to cook </p>
+      <h1 className='text-3xl font-semibold mt-12'>Our Recipes</h1>
+      <p className='mb-12'>Here you can find six of our popular dishes as a beginner learner. You can select any one or more items that you want to cook </p>
     </div>
 
     <div className='flex lg:flex-row flex-col justify-between gap-10 '>
-   <div className='grid lg:grid-cols-2 grid-cols-1 gap-7 lg:w-2/3 '>
+   <div className='grid lg:grid-cols-2 grid-cols-1 gap-7  '>
     {
       recipes.map(recipe=><Recipes key={recipe.id}
       recipe={recipe}
@@ -73,13 +73,17 @@ function App() {
     }
    
    </div>
-    <div className='border-2  bg-base-100 shadow-xl p-11 lg:w-1/3 '>
-      <h1 className='text-xl font-semibold border-b-2 border-green-400'>Want To Cook : 0{items.length}</h1>
-      <table className='lg:p-2 '>
-  <tr className='border-b-2 border-gray-300 '>
-    <th className='lg:p-2 text-xs lg:text-lg p-3'>Name</th>
-    <th className='lg:p-2 text-xs lg:text-lg p-3'>Time</th>
-    <th className='lg:p-2 text-xs lg:text-lg p-3'>Calories</th>
+    <div>
+      
+      <table className='border-2 shadow-xl  '>
+        <tr>
+          <th className='text-xl font-semibold border-b-2 border-green-400 p-10' colSpan={4}> Want To Cook : 0{items.length}</th>
+         </tr>
+  <tr className='border-b-2 border-gray-300  '>
+    <th className='lg:p-2 text-xs p-3  '>Name</th>
+    <th className='lg:p-2 text-xs p-3  '>Time</th>
+    <th className='lg:p-2 text-xs p-3  '>Calories</th>
+    <th className='lg:p-2 text-xs p-3  '>Action</th>
   </tr>
   {
     items.map((item,idx)=><Sidebar key={idx}
@@ -87,14 +91,16 @@ function App() {
     handlePreparing={handlePreparing}></Sidebar>)
   }
 
-  
-</table>
-<h1 className='text-xl font-semibold border-b-2 border-green-400 mt-5'>Current Cooking: 0{samples.length}</h1>
-<table >
+  <tr>
+    <th className='text-xl font-semibold border-b-2 border-green-400 p-10 ' colSpan={4}>Current Cooking: 0{samples.length}</th>
+  </tr>
+
+
+
   <tr className=' border-b-2 border-gray-300 '>
-    <th className='lg:p-6 text-xs lg:text-lg'>Name</th>
-    <th className='lg:p-6 text-xs lg:text-lg'>Time</th>
-    <th className='lg:p-6 text-xs lg:text-lg'>Calories</th>
+    <th className='lg:p-6 text-xs p-2 ' colSpan={2}>Name</th>
+    <th className='lg:p-6 text-xs p-2 '>Time</th>
+    <th className='lg:p-6 text-xs p-2 '>Calories</th>
   </tr>
   {
     samples.map((sample,idx)=><Current key={idx}

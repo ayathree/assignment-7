@@ -2,7 +2,7 @@ import banner from '../../assets/images/Rectangle 1.jpg';
 
 const Banner = () => {
     return (
-        <div className="hero min-h-screen">
+        <div className="hero max-h-screen">
             <img src={banner} alt="" />
   <div className="hero-content text-center">
     <div className="p-7">
