@@ -1,6 +1,7 @@
 import { CiClock2 } from "react-icons/ci";
 import { AiOutlineFire } from "react-icons/ai";
 import Ingredient from "../Ingredient/Ingredient";
+import PropTypes from 'prop-types';
 
 const Recipes = ({recipe,handleWantToCook}) => {
 
@@ -48,5 +49,9 @@ console.log(ingredients);
 </div>
     );
 };
+Recipes.propTypes ={
+  recipe:PropTypes.object.isRequired,
+  handleWantToCook:PropTypes.func.isRequired,
+}
 
 export default Recipes;

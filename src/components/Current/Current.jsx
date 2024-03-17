@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 
 const Current = ({sample}) => {
     const {recipe_name, preparing_time, calories}=sample;
@@ -12,5 +12,9 @@ const Current = ({sample}) => {
       </tr>
     );
 };
+
+Current.propTypes ={
+  sample:PropTypes.object.isRequired,
+}
 
 export default Current;

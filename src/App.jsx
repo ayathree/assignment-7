@@ -60,7 +60,7 @@ function App() {
     
     
     <div>
-      <h1 className='text-3xl font-semibold mt-12'>Our Recipes</h1>
+      <h1 className='text-3xl font-semibold lg:mt-20 mt-12'>Our Recipes</h1>
       <p className='mb-12'>Here you can find six of our popular dishes as a beginner learner. You can select any one or more items that you want to cook </p>
     </div>
 
@@ -104,7 +104,8 @@ function App() {
   </tr>
   {
     samples.map((sample,idx)=><Current key={idx}
-    sample={sample}></Current>)
+    sample={sample}
+    ></Current>)
   }
 
   <tr>

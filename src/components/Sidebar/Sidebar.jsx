@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 
 const Sidebar = ({item, handlePreparing}) => {
     const{id,recipe_name, preparing_time, calories}=item
@@ -14,5 +14,11 @@ const Sidebar = ({item, handlePreparing}) => {
         
     );
 };
+
+Sidebar.propTypes = {
+  item: PropTypes.object.isRequired,
+  handlePreparing: PropTypes.func.isRequired,
+ 
+}
 
 export default Sidebar;
